@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import facade from "../apiFacade.js";
-import {dadJokeURL,chuckURL,ultimateJokeURL} from "../settings.js";
+import {dadJokeURL} from "../settings.js";
 
-const Joke = ({user}) => {
+const Dadjoke = ({user}) => {
 
 
     const [dataFromServer, setDataFromServer] = useState("")
-    const [joke, setJoke] = useState([])
+    const [joke, setJoke] = useState("")
+    // Favourite
     const [likedJoke, setLikedJokes] = useState([])
     let data = "";
 
@@ -14,17 +15,18 @@ const Joke = ({user}) => {
         setLikedJokes((prevLikedJokes ) =>[...prevLikedJokes, likedJoke])
     };
 
+
     useEffect( () => {
         if(user.username === ''){ setDataFromServer('Please login to see data from server');
 
             return;
         }
-        fetch(ultimateJokeURL)
+        fetch(dadJokeURL)
             .then(response => response.json())
-            .then(data =>setJoke(data.jokes) // Jokes because in the DTO the string is jokes
+            .then(data =>setJoke(data.joke) // Joke because in the DTO, the string is joke
 
             ).catch(err => {
-                console.error(err)
+            console.error(err)
         });
         const url = user.roles.split(',').includes('user') ? '/info/user' : '/info/admin';
         facade.fetchData(url).then(res => {
@@ -36,14 +38,11 @@ const Joke = ({user}) => {
     return (
         <div class="alljokepages">
             {dataFromServer}
-            <h3>{"CHUCK JOKE:    "+ joke[0]}</h3>
-            <button onClick={() => addFavorite(joke[0])}>Like</button>
-            <br/>
-            <h3>{"DAD JOKE:     "+ joke[1]}</h3>
-            <button onClick={() => addFavorite(joke[1])}>Like</button>
+            <h3>{"DAD JOKE:     "+ joke}</h3>
+            <button onClick={() => addFavorite(joke)}>Like</button>
             <h3>Liked jokes: {likedJoke}</h3>
         </div>
     );
 };
 
-export default Joke;
+export default Dadjoke;

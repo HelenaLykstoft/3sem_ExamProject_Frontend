@@ -1,5 +1,6 @@
+/* For the user with roles text */
 .header {
-    color: #adadad;
+    color: white;
 }
 .text-muted {
     color: #6c757d;
@@ -8,16 +9,39 @@
     color: #52962c;
 
 }
+
 /* For the router */
 ul.header {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: cadetblue;
   width: 100%;
  }
- 
+ #loginview{
+     float: right;
+     padding: 10px;
+ }
+ #loggingin{
+     float: right;
+     padding: 10px;
+ }
+
+ .aboutpage{
+     padding: 10px;
+     background-color: lightblue;
+     text-align: center;
+ }
+
+ .defaultwelcomepage{
+     background-color: lightblue;
+ }
+
+ .mywelcomepage{
+        background-color: lightgoldenrodyellow;
+ }
+
  ul.header li { float: left;}
  
  ul.header li a {
@@ -27,8 +51,14 @@ ul.header {
   padding: 14px 16px;
   text-decoration: none;
  }
- ul.header li a:hover:not(.active) { background-color: #111;}
- .active { background-color: #62e4f8;}
+
+ ul.header li a:hover:not(.active) {
+     background-color: #111;
+ }
+ .active {
+     background-color: lightpink;
+ }
+
 .loggedin { 
   color: whitesmoke;
   padding: 3px;
@@ -37,8 +67,23 @@ ul.header {
   padding: 14px 16px;
   float: right;
 }
+.alljokepages{
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+
+.featurette-heading {
+    color: cornflowerblue;
+}
+
+
+.welcomepage{
+    text-align: center;
+}
+
+
 .form input {
-  width: 200px;
+  width: 100px;
   padding: 12px 20px;
   margin: 2px 2px;
   display: inline-block;

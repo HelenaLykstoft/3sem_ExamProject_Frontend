@@ -5,6 +5,8 @@ import About from "./routes/About.jsx";
 import Joke from "./routes/Joke.jsx";
 import {Route, Routes} from "react-router-dom";
 import Home from "./routes/Home.jsx";
+import Dadjoke from "./routes/Dadjoke.jsx";
+import Chuckjoke from "./routes/Chuckjoke.jsx";
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About user={user} />}/>
         <Route path="/joke" element={<Joke user={user} />}/>
+        <Route path="/dadjoke" element={<Dadjoke user={user} />}/>
+        <Route path="/chuckjoke" element={<Chuckjoke user={user} />}/>
       </Routes>
     </div>
   )

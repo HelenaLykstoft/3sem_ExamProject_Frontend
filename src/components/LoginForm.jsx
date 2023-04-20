@@ -12,13 +12,11 @@ function LogIn({ login, logout}) {
     }
   
     return (
-      <>
-        <form onChange={onChange} >
+        <form id="loggingin" onChange={onChange} >
           <input placeholder="User Name" id="username" />
           <input placeholder="Password" id="password" />
           <button onClick={performLogin}>Login</button>
         </form>
-      </>
     )
   }
 export default LogIn;  
