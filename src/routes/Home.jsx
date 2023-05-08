@@ -9,7 +9,11 @@ const Home = () => {
                 <h1 className="featurette-heading">Welcome Page:
                     <span className="text-muted"> Thanks for checking my WEB-Client!</span>
                 </h1>
-
+                <div className="input-group">
+                    <input type="search" className="form-control rounded" placeholder="Search" aria-label="Search"
+                           aria-describedby="search-addon"/>
+                    <button type="button" className="btn btn-outline-primary">search</button>
+                </div>
                 <h2>This is Helena Botn Lykstoft's default homepage. </h2>
                 <h3>Down below is the normal homepage</h3>
                 <h4>This web-client is a joke page, where you can see a selection of the FINEST jokes!</h4>
