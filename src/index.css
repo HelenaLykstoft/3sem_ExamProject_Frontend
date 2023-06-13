@@ -1,103 +1,174 @@
-/* For the user with roles text */
-.header {
-    color: blueviolet;
-}
+
+/* For the jsx pages */
 .text-muted {
-    color: #6c757d;
+    color: lightgray;
 }
 .featurette-heading{
-    color: #52962c;
-
+    color: darkblue;
 }
 
-/* For the router */
+/* Background color or the column */
+
+
+/* For the navbar */
+.navbar{
+    background-color: #4B6389;
+}
+/* For the logo */
+.logo-image {
+    width: 50px; /* Adjust the desired width */
+    height: 40px; /* Adjust the desired height */
+}
+
+
+/* For the login form in nav bar */
+#loginview{
+    float: right;
+    padding: 10px;
+}
+
+
+#loggingin{
+    float: right;
+    padding: 10px;
+}
+
+/* For the header bar */
 ul.header {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: cadetblue;
-  width: 100%;
- }
- #loginview{
-     float: right;
-     padding: 10px;
- }
- #loggingin{
-     float: right;
-     padding: 10px;
- }
-
- .aboutpage{
-     padding: 10px;
-     background-color: lightblue;
-     text-align: center;
- }
-
- .defaultwelcomepage{
-     background-color: lightblue;
- }
-
- .mywelcomepage{
-        background-color: lightgoldenrodyellow;
- }
-
- ul.header li { float: left;}
- 
- ul.header li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
- }
-
- ul.header li a:hover:not(.active) {
-     background-color: #111;
- }
- .active {
-     background-color: lightpink;
- }
-
-.loggedin { 
-  color: whitesmoke;
-  padding: 3px;
-  text-align: center;
-  display: block;
-  padding: 14px 16px;
-  float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: powderblue;
+    width: 100%;
 }
-.alljokepages{
-    background-color: lightgoldenrodyellow;
+
+
+
+ul.header li { float: left;}
+
+ul.header li a {
+    display: block;
+    color: black;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.featurette-heading {
-    color: cornflowerblue;
+ul.header li a:hover:not(.active)
+{ background-color: cornflowerblue;}
+.active { background-color: steelblue;
 }
 
-
-.welcomepage{
+.loggedin {
     text-align: center;
+    display: block;
+    padding: 14px 16px;
+    float: right;
 }
 
+.logininput{
+    background: blueviolet;
+}
+
+::placeholder{
+    color: slategrey;
+}
+
+#loggingin{
+    float: right;
+    padding: 10px;
+}
+
+#loginview{
+    float: right;
+    padding: 10px;
+    color: darkseagreen;
+}
 
 .form input {
-  width: 100px;
-  padding: 12px 20px;
-  margin: 2px 2px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  /* box-sizing: border-box; */
+    width: 200px;
+    padding: 12px 20px;
+    margin: 2px 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
 }
+
 .form button {
-  width: 200px;
-  background-color: #ccc;
-  color: white;
-  padding: 14px 20px;
-  margin: 2px 2px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 200px;
+    background-color: #ccc;
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
+/* display this row with flex and use wrap (= respect columns' widths) */
+
+.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* vertical spacing between columns */
+
+[class*="col-"] {
+    margin-bottom: 30px;
+}
+
+.content {
+    height: 100%;
+    padding: 20px 20px 10px;
+    color: #fff;
+}
+
+
+/* Demo backgrounds and styling*/
+
+.colour-1 {
+    background: #4B6389;
+}
+
+.colour-2 {
+    background: 	#b0b8ce;
+}
+
+.colour-3 {
+    background: #022954;
+}
+
+.colour-4 {
+    background: #6984B1;
+}
+
+.colour-5 {
+    background: #505a74;
+}
+
+.colour-6 {
+    background: #a3c3e7;
+}
+
+.colour-7{
+    background: #94A7C7;
+}
+
+.colour-8{
+    background: #284F8F;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.content h3 {
+    margin-top: 0px;
+    font-weight: 300;
+}
+
+

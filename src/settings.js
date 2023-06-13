@@ -1,8 +1,5 @@
-export const baseURL = "http://localhost:8080/quickstart/api";
+export const baseURL = "https://www.javawithnoscript.dk/tomcat/exambackend/api";
 
-export const dadJokeURL = "http://localhost:8080/quickstart/api/joke/dad";
-
-export const chuckURL = "http://localhost:8080/quickstart/api/joke/chuck";
-
-export const ultimateJokeURL = "http://localhost:8080/quickstart/api/joke/2jokes";
-
+export const crudURL = "https://www.javawithnoscript.dk/tomcat/exambackend/api/crud";
+//export const baseURL = "http://localhost:8080/api";
+//export const crudURL = "http://localhost:8080/api/crud";

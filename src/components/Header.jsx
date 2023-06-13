@@ -1,21 +1,60 @@
 import {NavLink} from "react-router-dom";
-import LogIn from "./LoginForm.jsx";
-import LoggedIn from "./LoggedIn.jsx";
 import React from "react";
+import LoggedIn from "./LoggedIn.jsx";
+import LogIn from "./LoginForm.jsx";
 
-const Header = ({loggedIn, login, user, logout}) => {
+
+const Header = ({loggedIn, login, logout, user}) => {
     return (
-        <ul className="header">
-            <li id="link"><NavLink to={"/"}>Home</NavLink></li>
-            <li id="link"><NavLink to="/about">About</NavLink></li>
-            <li id="link"><NavLink to="/joke">Jokes</NavLink></li>
-            <li id="link"><NavLink to="/dadjoke">Dad joke</NavLink></li>
-            <li id="link"><NavLink to="/chuckjoke">Chuck joke</NavLink></li>
-            {!loggedIn ? (<LogIn login={login} />) :
-                (<>
-                    <LoggedIn user={user} logout={logout} />
-                </>)}
-        </ul>)
-}
+        <header>
+            <nav className="navbar navbar-expand-lg navbar-dark">
+                <div className="container">
+                    <div>
+                        <h5 className="navbar-brand"><strong>Exam project</strong></h5>
+                    </div>
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" exact to="/">Home</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" to="/About">About us</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" to="/FAQ">FAQ</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" to="/Rental">Rental</NavLink>
+                            </li>
+                            {user.roles.includes("admin") ? (<li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" to="/Adminpage">Adminpage</NavLink>
+                            </li>) : (<></>)}
+                            {loggedIn ? (<li className="nav-item">
+                                <NavLink className="nav-link" activeClassName="active" to="/loggedIn">Logged in yes</NavLink>
+                            </li>) : (<></>)}
+                        </ul>
+                    </div>
+                    <div className="float-right">
+                        {!loggedIn ? (<LogIn login={login}/>) :
+                            (<>
+                                <LoggedIn user={user} logout={logout}/>
+                            </>)}
+                    </div>
+                </div>
+            </nav>
+        </header>
+    );
+};
 
 export default Header;
