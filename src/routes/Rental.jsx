@@ -43,7 +43,7 @@ const Rental = ({user}) => {
 
 
 
-    // ! RETURN
+    // RETURN
     return (
         <div className="row featurette justify-content-center">
             <div className="col-md-10">

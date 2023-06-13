@@ -7,7 +7,7 @@ const Adminpage = () => {
     const [searchId, setSearchId] = useState('');
     const [selectedEntity, setSelectedEntity] = useState(null);
 
-    // ! UPDATE NOT WORKING YET
+    // UPDATE NOT WORKING YET
     const [updateData, setUpdateData] = useState({
         startDate: '',
         endDate: '',
