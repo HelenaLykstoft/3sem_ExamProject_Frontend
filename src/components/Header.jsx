@@ -32,16 +32,10 @@ const Header = ({loggedIn, login, logout, user}) => {
                                 <NavLink className="nav-link" activeClassName="active" to="/About">About us</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" activeClassName="active" to="/FAQ">FAQ</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink className="nav-link" activeClassName="active" to="/Rental">Rental</NavLink>
                             </li>
                             {user.roles.includes("admin") ? (<li className="nav-item">
                                 <NavLink className="nav-link" activeClassName="active" to="/Adminpage">Adminpage</NavLink>
-                            </li>) : (<></>)}
-                            {loggedIn ? (<li className="nav-item">
-                                <NavLink className="nav-link" activeClassName="active" to="/loggedIn">Logged in yes</NavLink>
                             </li>) : (<></>)}
                         </ul>
                     </div>

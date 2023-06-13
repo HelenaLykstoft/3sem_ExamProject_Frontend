@@ -151,7 +151,7 @@ const Adminpage = () => {
         <div className="row featurette justify-content-center">
             <div className="col-md-10">
                 <h1 className="featurette-heading">Admin page:
-                    <span className="text-muted"> Here u can xxx</span>
+                    <span className="text-muted"> Here u can see all rentals and houses, delete them and create new ones</span>
                 </h1>
         <div>
 

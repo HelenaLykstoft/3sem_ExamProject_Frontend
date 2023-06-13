@@ -4,8 +4,6 @@ import Header from "./components/Header.jsx";
 import About from "./routes/About.jsx";
 import {Route, Routes} from "react-router-dom";
 import Home from "./routes/Home.jsx";
-import FAQ from "./routes/FAQ.jsx";
-import loggedIn from "./routes/loggedIn.jsx";
 import SignUp from "./routes/SignUp.jsx";
 import Rental from "./routes/Rental.jsx";
 import AdminPage from "./routes/AdminPage.jsx";
@@ -33,10 +31,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About user={user} />}/>
-        <Route path="/FAQ" element={<FAQ/>}/>
         <Route path="/Rental" element={<Rental />}/>
         <Route path="/signup" element={<SignUp />}/>
-        <Route path="/loggedIn" element={loggedIn ? <loggedIn user={user} /> : <Home />}/>
         <Route path="/adminpage" element={loggedIn ? <AdminPage admin={user} /> : <Home />}/>
       </Routes>
     </div>
